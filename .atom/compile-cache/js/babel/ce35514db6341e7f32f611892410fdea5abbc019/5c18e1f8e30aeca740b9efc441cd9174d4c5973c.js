@@ -1,0 +1,19 @@
+"use babel";
+
+// Public: GrammarUtils.Perl - a module which assist the creation of Perl temporary files
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var GrammarUtilsPerl = {
+  // Public: Create a temporary file with the provided Perl code
+  //
+  // * `code`    A {String} containing some Perl code
+  //
+  // Returns the {String} filepath of the new file
+  createTempFileWithCode: function createTempFileWithCode(code) {
+    return module.parent.exports.createTempFileWithCode(code);
+  }
+};
+exports["default"] = GrammarUtilsPerl;
+module.exports = exports["default"];
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpbGU6Ly8vQzovVXNlcnMvY2tuanUvLmF0b20vcGFja2FnZXMvc2NyaXB0L2xpYi9ncmFtbWFyLXV0aWxzL3BlcmwuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsV0FBVyxDQUFBOzs7Ozs7QUFHWCxJQUFNLGdCQUFnQixHQUFHOzs7Ozs7QUFNdkIsd0JBQXNCLEVBQUEsZ0NBQUMsSUFBSSxFQUFFO0FBQzNCLFdBQU8sTUFBTSxDQUFDLE1BQU0sQ0FBQyxPQUFPLENBQUMsc0JBQXNCLENBQUMsSUFBSSxDQUFDLENBQUE7R0FDMUQ7Q0FDRixDQUFBO3FCQUNjLGdCQUFnQiIsImZpbGUiOiJmaWxlOi8vL0M6L1VzZXJzL2Nrbmp1Ly5hdG9tL3BhY2thZ2VzL3NjcmlwdC9saWIvZ3JhbW1hci11dGlscy9wZXJsLmpzIiwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2UgYmFiZWxcIlxuXG4vLyBQdWJsaWM6IEdyYW1tYXJVdGlscy5QZXJsIC0gYSBtb2R1bGUgd2hpY2ggYXNzaXN0IHRoZSBjcmVhdGlvbiBvZiBQZXJsIHRlbXBvcmFyeSBmaWxlc1xuY29uc3QgR3JhbW1hclV0aWxzUGVybCA9IHtcbiAgLy8gUHVibGljOiBDcmVhdGUgYSB0ZW1wb3JhcnkgZmlsZSB3aXRoIHRoZSBwcm92aWRlZCBQZXJsIGNvZGVcbiAgLy9cbiAgLy8gKiBgY29kZWAgICAgQSB7U3RyaW5nfSBjb250YWluaW5nIHNvbWUgUGVybCBjb2RlXG4gIC8vXG4gIC8vIFJldHVybnMgdGhlIHtTdHJpbmd9IGZpbGVwYXRoIG9mIHRoZSBuZXcgZmlsZVxuICBjcmVhdGVUZW1wRmlsZVdpdGhDb2RlKGNvZGUpIHtcbiAgICByZXR1cm4gbW9kdWxlLnBhcmVudC5leHBvcnRzLmNyZWF0ZVRlbXBGaWxlV2l0aENvZGUoY29kZSlcbiAgfSxcbn1cbmV4cG9ydCBkZWZhdWx0IEdyYW1tYXJVdGlsc1BlcmxcbiJdfQ==

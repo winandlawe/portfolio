@@ -164,6 +164,11 @@ directoryIcons:
 		icon: "circleci"
 		match: /^\.circleci$/
 
+	CNAB:
+		icon: "cnab"
+		match: /^cnab$/i
+		colour: "dark-blue"
+
 	CPAN:
 		icon: "cpan"
 		match: [
@@ -937,7 +942,8 @@ fileIcons:
 
 	Binder:
 		icon: "binder"
-		match: /^(dev-)?requirements\.txt$/
+		# HACK: Kludge to avoid deleting definition whilst also fixing #841
+		match: /^binder[-_]requirements\.(in|txt)$/i
 		colour: "medium-orange"
 		priority: 1.5
 		url: "https://mybinder.org/"
@@ -1210,6 +1216,13 @@ fileIcons:
 		colour: "dark-pink"
 		priority: 2
 
+	CASC:
+		icon: "casc"
+		match: /\.casc?$/i
+		colour: "auto-orange"
+		scope: "casc"
+		url: "https://github.com/CASC-Lang/CASC"
+
 	Ceylon:
 		icon: "ceylon"
 		match: ".ceylon"
@@ -1449,6 +1462,13 @@ fileIcons:
 		colour: "medium-blue"
 		priority: 2
 
+	Commitizen:
+		icon: "commitizen"
+		match: /^\.?cz\.(json|toml|ya?ml)$/i
+		colour: "dark-purple"
+		priority: 2
+		url: "https://commitizen-tools.github.io/commitizen/config/"
+
 	"Common Lisp":
 		icon: "cl"
 		scope: "common-lisp"
@@ -1548,13 +1568,14 @@ fileIcons:
 			[/^settings\.bsp$/i, "medium-green", priority: 1.5]
 			[/config|settings|option|pref/i, null, priority: 0]
 			[".flc", "medium-green", alias: "FIGlet control", scope: /^source\.figctrl$/i, signature: /^flc2a/]
+			[".kys", "medium-red", alias: "Adobe Keyboard Shortcuts", uses: "PostScript", IDs: {macCreatorCode: "ART5", macTypeCode: "Akys"}]
 			[///
 				/(dev[-\w]+|troff)/ ([^/]+/)*
 				(DESC|Foundry|download|symbolmap)
 				(\.(in|proto|8400))?$
 			///i, "dark-green", matchPath: true, priority: 1.5, scope: /^source\.ditroff\.desc$/]
 			[/[\/\\]fontforge[\/\\]hotkeys[\/\\][^\/\\]+/i, "dark-blue", matchPath: true, priority: 0.75, scope: /fontforge.hotkeys/i]
-			[/\.git[\/\\](config|info[\/\\]\w+)$/, "dark-red", matchPath: true]
+			[/\.git[\/\\](config|info[\/\\][-\w]+)$/, "dark-red", matchPath: true]
 			[/(^|[\/\\])\.fossil-settings\1(?:[^/\/]+)/, "dark-cyan", matchPath: true]
 			[/(^|[\/\\])\.ssh[\/\\]config$/, "dark-blue", matchPath: true, priority: 1.5]
 			[/^\/(private\/)?etc\/([^/]+\/)*[^/]*\.(cf|conf|ini)(\.default)?$/i, "dark-orange", matchPath: true]
@@ -1884,6 +1905,9 @@ fileIcons:
 			[/(^|\/)n?term\/O?tab\.(X|lpr)$/i, "medium-green", matchPath: true, priority: 1.5]
 			[/\.ssh[\/\\](authorized_keys|known_hosts)$/, "medium-green", matchPath: true]
 			[/^\.icondb\.js$/, "dark-red", priority: 1.5]
+			[/^index\.(bt|db|dir|pag)$/i, "medium-red", priority: 1.5]
+			[/^whatis$/i, "medium-maroon"]
+			[/^(language-subtag-registry(\.txt)?|nametable)$/, "dark-blue", priority: 1.5, scope: "record-jar"]
 			[/\.git[\/\\](.*[\/\\])?(HEAD|ORIG_HEAD|packed-refs|logs[\/\\](.+[\/\\])?[^\/\\]+)$/, "medium-red",
 				priority: 2,
 				matchPath: true]
@@ -2163,9 +2187,10 @@ fileIcons:
 
 	Electron:
 		icon: "electron"
-		match: /\.compilerc(\.json)?$/i
-		colour: "dark-blue"
-		priority: 2
+		match: [
+			[/\.compilerc(\.json)?$/i, "dark-blue", priority: 2]
+			[/(^|\.)forge\.config\.js$/i, "dark-cyan", priority: 1.4, url: "https://www.electronforge.io/configuration"]
+		]
 
 	Elixir:
 		icon: "elixir"
@@ -3863,6 +3888,7 @@ fileIcons:
 			[".mms", "medium-blue"]
 			[".mmk", "light-blue"]
 			[".pri", "dark-purple"]
+			[/^justfile$/i, "medium-cyan", "just"]
 		]
 
 	Mako:
@@ -5161,6 +5187,8 @@ fileIcons:
 			[".ps", "medium-red", scope: /(^|\.)postscript$/i, alias: "postscr", signature: /^%!PS/]
 			[".eps", "medium-orange"]
 			[".pfa", "dark-blue"]
+			[".bez", "medium-red", scope: "stdbez", alias: /^(St(andar)?d )B[eè]zier$/i, priority: 0.5]
+			[/^fontinfo$/i, "medium-blue", scope: "fontinfo", alias: "fontinfo", signature: /^IsItalicStyle\s/]
 			[/\.a[fm]m$/i, "medium-green", scope: "afm", signature: /^\s*Start(Comp|Master)?FontMetrics\s+(\d+\.\d+)/]
 			[/\.eps[fi]$/i, "dark-orange"]
 			[/^Fontmap$/, "dark-red"]
@@ -5301,7 +5329,12 @@ fileIcons:
 
 	PyPi:
 		icon: "pypi"
-		match: /^requirements\.in$/i
+		match: ///
+			^
+			( (dev|docs?|tests?) [-_] requirements
+			| requirements ([-_] (dev|docs?|tests?))?
+			) \.(in|txt)$
+		///i
 		colour: "dark-blue"
 		priority: 2
 
@@ -5804,6 +5837,7 @@ fileIcons:
 			[".scm", "medium-red", scope: "scheme", interpreter: /guile|bigloo|chicken/]
 			[".sld", "medium-blue"]
 			[".sps", "medium-purple"]
+			[".xtm", "medium-yellow", "extempore"]
 		]
 
 	Scilla:
@@ -6922,6 +6956,12 @@ fileIcons:
 			[".vbox_version", "auto-blue"]
 			[/\.vbox(-prev)?$/i, "auto-blue"]
 		]
+
+	Vite:
+		icon: "vite"
+		match: /^vite\.config\.[jt]s$/i
+		colour: "auto-yellow"
+		priority: 2
 
 	"Visual Studio":
 		icon: "vs"

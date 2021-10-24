@@ -3,7 +3,27 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.46...HEAD
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.47...HEAD
+
+
+[v2.1.47] - 2021-03-12
+----------------------
+### Added
+- **New icons:** CASC (`.casc`, `.cas`), CNAB (`cnab` directories), Commitizen (`.cz.{json,toml,yaml}`), Fiddle, Laravel (updated logo), Vite (`vite.config.{js,ts}`)
+- **Support:** Config (`.git/info/*-*`, `.kys`), Databases (`index.{bt,db,dir,pag}`, `language-subtag-registry{,.txt}`, `nametable`, `whatis`), Electron (`{,*.}forge.config.js`), Makefile (`justfile`), PostScript (`.bez`, `fontinfo`), PyPi (`{dev,{doc,test}{,s}}-requirements.{in,txt}`, `requirements-{dev,{doc,test}{,s}}.{in,txt}`), Scheme (`.xtm`)
+
+### Fixed
+- Icons of symlinked projects that aren't Git repositories
+- [[`#841`][]]: `requirements.txt` showing [Binder][] icon instead of PyPi's
+- [[`#843`][]]: Breakage in Atom 1.56.0 caused by mixed BigInt comparisons
+- [[`github/linguist#5271`][]]: Inaccuracies related to modeline matching
+
+[v2.1.47]: https://github.com/file-icons/atom/releases/tag/v2.1.47
+[`github/linguist#5271`]: https://github.com/github/linguist/pull/5271
+[`#841`]: https://github.com/file-icons/atom/issues/841
+[`#843`]: https://github.com/file-icons/atom/issues/843
+[Binder]: https://mybinder.org/
+
 
 
 [v2.1.46] - 2020-12-14
