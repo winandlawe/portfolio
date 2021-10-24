@@ -1,0 +1,62 @@
+{
+  "_from": "https://www.atom.io/api/packages/atom-live-server/versions/2.3.0/tarball",
+  "_id": "atom-live-server@2.3.0",
+  "_inBundle": false,
+  "_integrity": "sha512-PnhT1Fk94qL1SWmgCzAxx/wdaIHAd53xaEM5gdEs3UfsSR/5dfkNH+FvDNW8WK6oHOLnB2JkVsyIJdZx05SBSQ==",
+  "_location": "/atom-live-server",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/atom-live-server/versions/2.3.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/atom-live-server/versions/2.3.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/atom-live-server/versions/2.3.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/atom-live-server/versions/2.3.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/atom-live-server/versions/2.3.0/tarball",
+  "_shasum": "7203393d8557b43527ccd4205ba3480684913548",
+  "_spec": "https://www.atom.io/api/packages/atom-live-server/versions/2.3.0/tarball",
+  "_where": "C:\\Users\\cknju\\AppData\\Local\\Temp\\apm-install-dir-2020830-42744-1pi5mmu.jst9",
+  "activationEvents": [
+    "atom-live-server:activate"
+  ],
+  "bugs": {
+    "url": "https://github.com/jas-chen/atom-live-server/issues"
+  },
+  "bundleDependencies": false,
+  "consumedServices": {
+    "console": {
+      "versions": {
+        "^0.1.0": "consumeConsole"
+      }
+    }
+  },
+  "dependencies": {
+    "json5": "^0.5.1",
+    "live-server": "^1.2.0",
+    "strip-ansi": "^4.0.0"
+  },
+  "deprecated": false,
+  "description": "Launch a http server with live reload capability.",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/jas-chen/atom-live-server#readme",
+  "keywords": [
+    "static",
+    "server",
+    "live reload",
+    "livereload"
+  ],
+  "license": "MIT",
+  "main": "./lib/atom-live-server",
+  "name": "atom-live-server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jas-chen/atom-live-server.git"
+  },
+  "version": "2.3.0"
+}

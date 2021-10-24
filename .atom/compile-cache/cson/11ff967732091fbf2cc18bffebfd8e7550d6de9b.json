@@ -1,0 +1,1 @@
+{".text.html.vue":{"Vue Component":{"prefix":"template","body":"<template lang=\"${1:html}\">\n  $4\n</template>\n\n<script>\nexport default {\n}\n</script>\n\n<style lang=\"${2:css}\" ${3:scoped}>\n</style>\n"},"Router link":{"prefix":"router-link","body":"<router-link :to=\"{ name: '', params: {} }\"></router-link>"}}}
