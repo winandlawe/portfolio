@@ -1,0 +1,150 @@
+{
+  "_from": "https://www.atom.io/api/packages/minimap/versions/4.39.14/tarball",
+  "_id": "minimap@4.39.14",
+  "_inBundle": false,
+  "_integrity": "sha512-pYOSz3BjWi7pJ/SP2tQ+DRHAsEiDs7DPc4wPGYog0cdqnZwet0KKZtuJcN04emxiBgw5hHI8+XoKwhByOyExRQ==",
+  "_location": "/minimap",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/minimap/versions/4.39.14/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/minimap/versions/4.39.14/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/minimap/versions/4.39.14/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/minimap/versions/4.39.14/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/minimap/versions/4.39.14/tarball",
+  "_shasum": "128fa8ca2a5c48d919ee30219d3854e060540afe",
+  "_spec": "https://www.atom.io/api/packages/minimap/versions/4.39.14/tarball",
+  "_where": "C:\\Users\\cknju\\AppData\\Local\\Temp\\apm-install-dir-2021413-10064-178mwzv.a335",
+  "activationHooks": [
+    "core:loaded-shell-environment"
+  ],
+  "author": {
+    "name": "Fangdun Cai",
+    "email": "cfddream@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/atom-minimap/minimap/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Fangdun Cai",
+      "email": "cfddream@gmail.com"
+    },
+    {
+      "name": "Cédric Néhémie",
+      "email": "cedric.nehemie@gmail.com"
+    },
+    {
+      "name": "Amin Yahyaabadi",
+      "email": "aminyahyaabadi74@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "atom-utils-plus": "^0.11.0",
+    "delegato": "^1.0.0",
+    "element-resize-detector": "^1.2.2",
+    "fs-plus": "^3.1.1",
+    "mixto": "^1.0.0"
+  },
+  "deprecated": false,
+  "description": "A preview of the full source code.",
+  "devDependencies": {
+    "@types/atom": "^1.40.10",
+    "@types/jasmine": "3.6.9",
+    "babel-preset-atomic": "^4.1.0",
+    "build-commit": "^0.1.4",
+    "cross-env": "^7.0.3",
+    "esdoc": "^1.1.0",
+    "esdoc-es7-plugin": "^0.0.3",
+    "eslint": "^7.23.0",
+    "eslint-config-atomic": "^1.12.5",
+    "jasmine-expect": "^5.0.0",
+    "npm-check-updates": "latest",
+    "prettier-config-atomic": "^1.0.1",
+    "rollup-plugin-atomic": "^2.3.1",
+    "shx": "^0.3.3",
+    "underscore-plus": "^1.7.0"
+  },
+  "engines": {
+    "atom": ">=1.13.0"
+  },
+  "homepage": "https://github.com/atom-minimap/minimap#readme",
+  "keywords": [
+    "minimap",
+    "overview"
+  ],
+  "license": "MIT",
+  "main": "./dist/main.js",
+  "name": "minimap",
+  "prettier": "prettier-config-atomic",
+  "providedServices": {
+    "minimap": {
+      "description": "Exposes the minimap API to other packages",
+      "versions": {
+        "1.0.0": "provideMinimapServiceV1"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atom-minimap/minimap.git"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production cross-env BABEL_KEEP_MODULES=true rollup -c",
+    "build-commit": "npm run clean && build-commit -o dist",
+    "build.readable": "cross-env NODE_ENV=production READABLE_BUILD=true BABEL_KEEP_MODULES=true rollup -c",
+    "build.test": "cross-env NODE_ENV=test BABEL_KEEP_MODULES=true rollup -c",
+    "bump": "ncu -u",
+    "clean": "shx rm -rf dist .parcel-cache",
+    "dev": "cross-env NODE_ENV=development BABEL_KEEP_MODULES=true rollup -c -w",
+    "esdoc": "esdoc -c esdoc.json",
+    "format": "prettier --write .",
+    "lint": "eslint . --fix",
+    "prepare": "npm run build",
+    "test": "atom --test spec",
+    "test.format": "prettier . --check",
+    "test.lint": "eslint ."
+  },
+  "standard": {
+    "globals": [
+      "advanceClock",
+      "atom",
+      "beforeEach",
+      "afterEach",
+      "expect",
+      "describe",
+      "fdescribe",
+      "ffdescribe",
+      "fffdescribe",
+      "xdescribe",
+      "it",
+      "xit",
+      "fit",
+      "ffit",
+      "fffit",
+      "jasmine",
+      "MouseEvent",
+      "runs",
+      "spyOn",
+      "waits",
+      "waitsFor",
+      "waitsForPromise",
+      "devicePixelRatio",
+      "requestAnimationFrame",
+      "Event",
+      "MouseEvent",
+      "IntersectionObserver",
+      "cancelAnimationFrame"
+    ]
+  },
+  "version": "4.39.14",
+  "viewProviders": [
+    "minimapViewProvider"
+  ]
+}
